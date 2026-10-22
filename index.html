@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faeedc" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Halloween RSVP Tracker | Playbean</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="tracker-shell">
+      <header class="tracker-header">
+        <img src="./playbean-logo.png" alt="Playbean" />
+        <div>
+          <h1>Halloween RSVP tracker</h1>
+          <p>See who is attending the Spooktacular Carnival.</p>
+        </div>
+      </header>
+
+      <section class="access-panel" id="access-panel" aria-labelledby="access-title">
+        <div>
+          <h2 id="access-title">Open the response list</h2>
+          <p>Enter the private tracker access code configured on the Playbean server.</p>
+        </div>
+        <form id="access-form">
+          <label for="access-code">Access code</label>
+          <div class="access-row">
+            <input id="access-code" name="accessCode" type="password" autocomplete="current-password" required />
+            <button type="submit">View responses</button>
+          </div>
+          <p class="form-message" id="access-message" role="alert"></p>
+        </form>
+      </section>
+
+      <section class="response-panel" id="response-panel" hidden aria-live="polite">
+        <div class="response-heading">
+          <div>
+            <h2>Invitation responses</h2>
+            <p id="last-updated">Loading the latest replies…</p>
+          </div>
+          <div class="heading-actions">
+            <button class="secondary-button" id="refresh-button" type="button">Refresh</button>
+            <button class="text-button" id="sign-out-button" type="button">Lock tracker</button>
+          </div>
+        </div>
+
+        <dl class="summary-strip" aria-label="Response totals">
+          <div><dt>Attending</dt><dd id="yes-count">—</dd></div>
+          <div><dt>Not attending</dt><dd id="no-count">—</dd></div>
+          <div><dt>Total replies</dt><dd id="total-count">—</dd></div>
+        </dl>
+
+        <div class="response-tools">
+          <label for="response-search">
+            Search attendee
+            <input id="response-search" type="search" placeholder="Name or email" />
+          </label>
+          <label for="response-filter">
+            Response
+            <select id="response-filter">
+              <option value="all">All responses</option>
+              <option value="yes">Attending</option>
+              <option value="no">Not attending</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="panel-message" id="panel-message" role="alert"></p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Contact</th><th>Response</th><th>Responded</th></tr></thead>
+            <tbody id="response-list"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Playbean Halloween invitation</title>
+    <style>
+      @media only screen and (max-width: 620px) {
+        .email-shell { width: 100% !important; }
+        .email-card { padding: 34px 22px !important; }
+        .email-title { font-size: 34px !important; line-height: 38px !important; }
+        .email-button { display: block !important; width: auto !important; margin: 0 0 12px !important; }
+      }
+    </style>
+  </head>
+  <body style="margin:0;padding:0;background:#faeedc;color:#5b3529;font-family:'Trebuchet MS',Arial,sans-serif;">
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Please let us know if your family can attend the Playbean Halloween event.</div>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#faeedc;">
+      <tr>
+        <td align="center" style="padding:32px 14px;">
+          <table class="email-shell" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;">
+            <tr>
+              <td class="email-card" style="background:#fffaf2;border-radius:16px;padding:48px 46px;text-align:center;box-shadow:0 14px 34px rgba(102,66,45,.12);">
+                <img src="https://playbeanph-cloud.github.io/playbean-thankyou-page/playbean-logo.png" width="104" alt="Playbean" style="display:block;width:104px;height:auto;margin:0 auto 28px;border:0;" />
+                <h1 class="email-title" style="margin:0 0 16px;color:#b83d16;font-size:42px;line-height:46px;letter-spacing:-1px;">Will we see you there?</h1>
+                <p style="margin:0 auto 24px;max-width:460px;color:#6f5147;font-size:17px;line-height:27px;">Hi {{{FIRST_NAME|Playbean family}}}, please confirm whether your family will attend Playbean’s Spooktacular Carnival.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 28px;background:#d8efeb;border-radius:14px;">
+                  <tr><td style="padding:22px;color:#285f58;font-size:16px;line-height:25px;text-align:center;"><strong style="font-size:18px;">October 25, 2026 · 3:00 PM</strong><br />Playbean Play &amp; Café</td></tr>
+                </table>
+                <p style="margin:0 0 20px;color:#6f5147;font-size:15px;line-height:23px;">Tap one answer below. Your response is recorded immediately and is separate from your payment status.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td align="center" style="padding:0 0 12px;">
+                      <a class="email-button" href="https://pb-booking-server.onrender.com/events/spooktacular-2026-10-25/rsvp?response=yes&amp;email={{{EMAIL}}}&amp;firstName={{{FIRST_NAME}}}&amp;lastName={{{LAST_NAME}}}" style="display:inline-block;background:#287d73;color:#ffffff;text-decoration:none;border-radius:999px;padding:15px 28px;font-size:16px;font-weight:bold;">Yes, we’ll attend</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <a class="email-button" href="https://pb-booking-server.onrender.com/events/spooktacular-2026-10-25/rsvp?response=no&amp;email={{{EMAIL}}}&amp;firstName={{{FIRST_NAME}}}&amp;lastName={{{LAST_NAME}}}" style="display:inline-block;background:#b83d16;color:#ffffff;text-decoration:none;border-radius:999px;padding:15px 28px;font-size:16px;font-weight:bold;">Sorry, we can’t attend</a>
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin:30px 0 0;color:#846a61;font-size:13px;line-height:20px;">If your plans change, tap the other answer later and we’ll update your response.</p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding:22px 20px;color:#846a61;font-size:12px;line-height:18px;">Playbean Play &amp; Café<br /><a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#6a5148;text-underline-offset:3px;">Unsubscribe from these emails</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
