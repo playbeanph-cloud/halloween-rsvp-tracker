@@ -31,13 +31,13 @@
   function renderRows() {
     const query = state.search.trim().toLowerCase();
     const visible = state.responses.filter((record) => {
-      const name = `${record.firstName || ""} ${record.lastName || ""}`.trim();
+      const name = record.fullName || `${record.firstName || ""} ${record.lastName || ""}`.trim();
       return (state.filter === "all" || record.response === state.filter)
         && (!query || name.toLowerCase().includes(query) || String(record.email || "").toLowerCase().includes(query));
     });
 
     responseList.innerHTML = visible.length ? visible.map((record) => {
-      const fullName = `${record.firstName || ""} ${record.lastName || ""}`.trim() || "Name not supplied";
+      const fullName = record.fullName || `${record.firstName || ""} ${record.lastName || ""}`.trim() || "Name not supplied";
       const label = record.response === "yes" ? "Attending" : "Not attending";
       return `<tr>
         <td data-label="Contact"><span class="contact-name">${escapeHtml(fullName)}</span><span class="contact-email">${escapeHtml(record.email)}</span></td>

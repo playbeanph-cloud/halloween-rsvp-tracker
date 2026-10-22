@@ -5,46 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Playbean Halloween invitation</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
       @media only screen and (max-width: 620px) {
         .email-shell { width: 100% !important; }
-        .email-card { padding: 34px 22px !important; }
-        .email-title { font-size: 34px !important; line-height: 38px !important; }
-        .email-button { display: block !important; width: auto !important; margin: 0 0 12px !important; }
+        .email-card { padding: 34px 22px 36px !important; }
+        .email-title { font-size: 34px !important; line-height: 39px !important; }
+        .button-table { width: 100% !important; }
+        .event-date { font-size: 18px !important; }
       }
     </style>
   </head>
-  <body style="margin:0;padding:0;background:#faeedc;color:#5b3529;font-family:'Trebuchet MS',Arial,sans-serif;">
-    <div style="display:none;max-height:0;overflow:hidden;opacity:0;">Please let us know if your family can attend the Playbean Halloween event.</div>
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#faeedc;">
+  <body style="margin:0;padding:0;background:#faeedc;color:#5b3529;font-family:'Poppins','Trebuchet MS',Arial,sans-serif;">
+    <div style="display:none;max-height:0;overflow:hidden;opacity:0;">One tap is all it takes to confirm your Halloween invitation.</div>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;table-layout:fixed;background:#faeedc;">
       <tr>
-        <td align="center" style="padding:32px 14px;">
-          <table class="email-shell" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;">
+        <td align="center" style="padding:34px 14px;">
+          <table class="email-shell" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px;max-width:600px;table-layout:fixed;">
             <tr>
-              <td class="email-card" style="background:#fffaf2;border-radius:16px;padding:48px 46px;text-align:center;box-shadow:0 14px 34px rgba(102,66,45,.12);">
-                <img src="https://playbeanph-cloud.github.io/playbean-thankyou-page/playbean-logo.png" width="104" alt="Playbean" style="display:block;width:104px;height:auto;margin:0 auto 28px;border:0;" />
-                <h1 class="email-title" style="margin:0 0 16px;color:#b83d16;font-size:42px;line-height:46px;letter-spacing:-1px;">Will we see you there?</h1>
-                <p style="margin:0 auto 24px;max-width:460px;color:#6f5147;font-size:17px;line-height:27px;">Hi {{{FIRST_NAME|Playbean family}}}, please confirm whether your family will attend Playbean’s Spooktacular Carnival.</p>
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="margin:0 0 28px;background:#d8efeb;border-radius:14px;">
-                  <tr><td style="padding:22px;color:#285f58;font-size:16px;line-height:25px;text-align:center;"><strong style="font-size:18px;">October 25, 2026 · 3:00 PM</strong><br />Playbean Play &amp; Café</td></tr>
-                </table>
-                <p style="margin:0 0 20px;color:#6f5147;font-size:15px;line-height:23px;">Tap one answer below. Your response is recorded immediately and is separate from your payment status.</p>
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+              <td style="height:8px;background:#f2a900;border-radius:16px 16px 0 0;font-size:0;line-height:0;">&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="email-card" align="center" style="background:#fffaf2;padding:46px 48px 48px;border-radius:0 0 16px 16px;box-shadow:0 16px 38px rgba(44,28,19,.12);">
+                <img src="https://playbeanph-cloud.github.io/playbean-thankyou-page/playbean-logo.png" width="112" alt="Playbean" style="display:block;width:112px;max-width:100%;height:auto;margin:0 auto 30px;border:0;" />
+                <h1 class="email-title" style="margin:0 0 14px;color:#b83d16;font-family:'Poppins','Trebuchet MS',Arial,sans-serif;font-size:42px;line-height:47px;font-weight:800;letter-spacing:-1.2px;text-align:center;">Will we see you there?</h1>
+                <p style="margin:0 auto 26px;max-width:465px;color:#6f5147;font-size:17px;line-height:28px;font-weight:400;text-align:center;overflow-wrap:anywhere;word-break:break-word;">Hi <strong style="color:#5b3529;font-weight:700;">{{{FULL_NAME_OF_PARENT_GUARDIAN|Playbean family}}}</strong>, please let us know if your family can join Playbean’s Spooktacular Carnival.</p>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%;margin:0 0 28px;background:#d8efeb;border-radius:14px;">
                   <tr>
-                    <td align="center" style="padding:0 0 12px;">
-                      <a class="email-button" href="https://pb-booking-server.onrender.com/events/spooktacular-2026-10-25/rsvp?response=yes&amp;email={{{EMAIL}}}&amp;firstName={{{FIRST_NAME}}}&amp;lastName={{{LAST_NAME}}}" style="display:inline-block;background:#287d73;color:#ffffff;text-decoration:none;border-radius:999px;padding:15px 28px;font-size:16px;font-weight:bold;">Yes, we’ll attend</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-                      <a class="email-button" href="https://pb-booking-server.onrender.com/events/spooktacular-2026-10-25/rsvp?response=no&amp;email={{{EMAIL}}}&amp;firstName={{{FIRST_NAME}}}&amp;lastName={{{LAST_NAME}}}" style="display:inline-block;background:#b83d16;color:#ffffff;text-decoration:none;border-radius:999px;padding:15px 28px;font-size:16px;font-weight:bold;">Sorry, we can’t attend</a>
+                    <td align="center" style="padding:22px 18px;color:#285f58;font-family:'Poppins','Trebuchet MS',Arial,sans-serif;font-size:15px;line-height:24px;">
+                      <strong class="event-date" style="display:block;margin-bottom:2px;font-size:19px;line-height:27px;font-weight:800;">October 25, 2026 · 3:00 PM</strong>
+                      Playbean Play &amp; Café
                     </td>
                   </tr>
                 </table>
-                <p style="margin:30px 0 0;color:#846a61;font-size:13px;line-height:20px;">If your plans change, tap the other answer later and we’ll update your response.</p>
+                <p style="margin:0 auto 22px;max-width:430px;color:#6f5147;font-size:15px;line-height:24px;text-align:center;">Choose one answer below. Your reply is saved immediately and is separate from your payment status.</p>
+                <table class="button-table" role="presentation" width="360" cellspacing="0" cellpadding="0" border="0" style="width:360px;max-width:100%;margin:0 auto 12px;">
+                  <tr>
+                    <td align="center" bgcolor="#287d73" style="height:54px;background:#287d73;border-radius:999px;">
+                      <a href="https://pb-booking-server.onrender.com/events/spooktacular-2026-10-25/rsvp?response=yes&amp;email={{{EMAIL}}}&amp;fullName={{{FULL_NAME_OF_PARENT_GUARDIAN}}}" style="display:block;width:100%;padding:15px 18px;box-sizing:border-box;color:#ffffff;font-family:'Poppins','Trebuchet MS',Arial,sans-serif;font-size:16px;line-height:24px;font-weight:700;text-align:center;text-decoration:none;">Yes, we’ll attend</a>
+                    </td>
+                  </tr>
+                </table>
+                <table class="button-table" role="presentation" width="360" cellspacing="0" cellpadding="0" border="0" style="width:360px;max-width:100%;margin:0 auto;">
+                  <tr>
+                    <td align="center" bgcolor="#b83d16" style="height:54px;background:#b83d16;border-radius:999px;">
+                      <a href="https://pb-booking-server.onrender.com/events/spooktacular-2026-10-25/rsvp?response=no&amp;email={{{EMAIL}}}&amp;fullName={{{FULL_NAME_OF_PARENT_GUARDIAN}}}" style="display:block;width:100%;padding:15px 18px;box-sizing:border-box;color:#ffffff;font-family:'Poppins','Trebuchet MS',Arial,sans-serif;font-size:16px;line-height:24px;font-weight:700;text-align:center;text-decoration:none;">Sorry, we can’t attend</a>
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin:30px auto 0;max-width:430px;color:#80665d;font-size:13px;line-height:21px;text-align:center;">Plans changed? Tap the other answer later and we’ll update your response.</p>
               </td>
             </tr>
             <tr>
-              <td align="center" style="padding:22px 20px;color:#846a61;font-size:12px;line-height:18px;">Playbean Play &amp; Café<br /><a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#6a5148;text-underline-offset:3px;">Unsubscribe from these emails</a></td>
+              <td align="center" style="padding:22px 20px;color:#80665d;font-family:'Poppins','Trebuchet MS',Arial,sans-serif;font-size:12px;line-height:19px;">Playbean Play &amp; Café<br /><a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#6a5148;text-decoration:underline;text-underline-offset:3px;">Unsubscribe from these emails</a></td>
             </tr>
           </table>
         </td>
